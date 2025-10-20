@@ -90,7 +90,7 @@ while True:
         print("🗑️ Cliente eliminado y IDs reasignados.")
 
     elif opcion == 5:
-        print("👋 ¡Hasta luego, Andrés!")
+        print("👋 ¡Hasta luego chavalines!")
         break
 
     else:
