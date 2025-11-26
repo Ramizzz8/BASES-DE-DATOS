@@ -15,7 +15,7 @@
        <nav>
         <script>
             // En primer lugar cargamos datos de un json
-           fetch("botones.json")
+           fetch("http://127.0.0.1:5000/tablas")
            .then(function(respuesta){
                return respuesta.json(); // La resp viene en JSON
            })
@@ -42,7 +42,7 @@
         </style>
         <script>
                        // En primer lugar cargamos datos de un json
-           fetch("tabla.json")
+           fetch("http://127.0.0.1:5000/clientes")
            .then(function(respuesta){
                return respuesta.json(); // La resp viene en JSON
            })

@@ -1,5 +1,6 @@
 import pymysql
-from flask import Flask
+from flask import Flask, render_template
+
 
 conexion = pymysql.connect(
     host="localhost",
@@ -13,11 +14,12 @@ conexion = pymysql.connect(
 app = Flask(__name__)
 @app.route('/')
 def index():
-    cursor = conexion.cursor(dict=True)
+    cursor = conexion.cursor()
     cursor.execute('''SELECT * FROM matriculas_join;
     ''')
     filas = cursor.fetchall()
-    return str(filas)
+    return render_template('index.html', filas=filas)
+
 
 if __name__ == '__main__':
     app.run(debug=True)

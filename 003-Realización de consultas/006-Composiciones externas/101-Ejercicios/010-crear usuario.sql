@@ -1,6 +1,6 @@
 CREATE USER 
 'composiciones'@'localhost' 
-IDENTIFIED  BY 'composiciones123$';
+IDENTIFIED  BY 'Composiciones123$';
 
 GRANT USAGE ON *.* TO 'composiciones'@'localhost';
 

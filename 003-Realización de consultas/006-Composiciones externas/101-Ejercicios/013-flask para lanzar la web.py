@@ -13,7 +13,7 @@ conexion = pymysql.connect(
 app = Flask(__name__)
 @app.route('/')
 def index():
-    cursor = conexion.cursor(dict=True)
+    cursor = conexion.cursor(dictionary=True)
     cursor.execute('''SELECT * FROM matriculas_join;
     ''')
     filas = cursor.fetchall()
