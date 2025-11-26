@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+   <head>
+       <style>
+           html,body{height:100%; padding: 0px; margin: 0px; display: flex;WIDTH:100%;}
+           main{flex:4;background:rgb(255, 255, 255);padding:20px;}
+           nav{display:flex;flex-direction:column;gap:20px;padding: 20px;}
+           nav{width:200px; background-color:rgb(68, 68, 68);flex: 1;}
+           /*make butons look prettier in black and white*/
+           nav button{border:none;background:rgb(0, 0, 0);color:rgb(255, 255, 255);padding:20px;}
+           
+       </style>
+   </head>
+   <body>
+       <nav>
+        <script>
+            // En primer lugar cargamos datos de un json
+           fetch("botones.json")
+           .then(function(respuesta){
+               return respuesta.json(); // La resp viene en JSON
+           })
+           .then(function(datos){
+               // Y luego creamos botones a partir de lo que hay en el json
+           		let contenedor = document.querySelector("nav")
+                datos.forEach(function(texto_boton){
+                	let boton = document.createElement("button")
+                    boton.textContent = texto_boton;
+                    contenedor.appendChild(boton);
+                })
+           })
+        </script>
+       </nav>
+       <main>
+        <style>
+           table{border:3px solid rgb(0, 0, 0);border-collapse:collapse; background-color:white; justify-content: center; padding: 20px; margin:20px auto;}
+           table tr:first-child{background:rgb(56, 56, 56);color:white;}
+           table tr td{padding:10px;}
+           table tr td{border:1px solid rgb(0, 0, 0);}
+
+           body{font-family:Arial, Helvetica, sans-serif;}
+           body{background-color:rgb(53, 53, 53);}
+        </style>
+        <script>
+                       // En primer lugar cargamos datos de un json
+           fetch("tabla.json")
+           .then(function(respuesta){
+               return respuesta.json(); // La resp viene en JSON
+           })
+           .then(function(datos){
+               let contenedor = document.querySelector("main");
+               let tabla = document.createElement("table");
+               contenedor.appendChild(tabla);
+                datos.forEach(function(linea){
+                    //primero creo una fila
+                    let fila = document.createElement("tr");
+                    //creo tantas celdas como sean necesarias
+                    linea.forEach(function(celda){
+                        let data = document.createElement("td");
+                        data.textContent = celda;
+                        fila.appendChild(data);
+                    });
+                    tabla.appendChild(fila);
+                });
+           })
+        </script>
+       </main>
+   </body>
+</html>

@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <title>Backoffice</title>
+    <meta charset="utf-8">
+    <style>
+      
+    </style>
+  </head>
+  <body>
+    <header>Gestión de escuela</header>
+    <main>
+      <section>
+        {% for columna in mis_columnas:%}
+        <th>{{columna}}</th>
+        {% endfor %}
+      </section>    
+    </main>
+  </body>
+</html>
