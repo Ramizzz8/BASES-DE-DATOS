@@ -40,7 +40,6 @@ VALUES
 UPDATE piezasportafolio
 SET descripcion = 'Fotografía impresionante de un atardecer en la playa'
 WHERE identificador = 1;
-
 --BORRAR UNA PIEZA DEL PORTAFOLIO
 DELETE FROM piezasportafolio WHERE identificador = 1;
 DELETE FROM piezasportafolio WHERE identificador = 2;
@@ -48,15 +47,12 @@ DELETE FROM piezasportafolio WHERE identificador = 2;
 SELECT * FROM piezasportafolio;
 --DESCRIBIMOS LA TABLA CATEGORIASPORTAFOLIO
 DESCRIBE categoriasportafolio;
-
 --DESCRIBIMOS LA TABLA PIEZASPORTAFOLIO
 DESCRIBE piezasportafolio;
-
 --HACEMOS UN JOIN ENTRE LAS DOS TABLAS
 SELECT p.identificador, p.titulo AS pieza_titulo, p.descripcion AS pieza_descripcion, p.fecha, c.nombre AS categoria_nombre
 FROM piezasportafolio p
 LEFT JOIN categoriasportafolio c ON p.id_categoria = c.identificador;
-
 --HACEMOS UN JOIN ENTRE LAS DOS TABLAS Y CREAMOS UNA VISTA
 CREATE VIEW vista_piezas_categoriasportafolio AS
 SELECT p.identificador, p.titulo AS pieza_titulo, p.descripcion AS pieza_descripcion, p.fecha, c.nombre AS categoria_nombre
