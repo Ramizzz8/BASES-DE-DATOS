@@ -24,7 +24,7 @@ INSERT INTO profesores (Identificador, nombre, apellidos) VALUES
 (6,'Carmen','Fuentes Beltrán'),
 (7,'Roberto','Pascual Torres');
 
-INSERT INTO asignaturas (Identificador, nombre, id_profesor) VALUES
+INSERT INTO asignaturas (Identificador, nombre, idprofesor) VALUES
 (1,'Matemáticas',1),
 (2,'Lengua Española',2),
 (3,'Historia',3),

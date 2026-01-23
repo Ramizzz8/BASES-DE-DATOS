@@ -1,0 +1,54 @@
+{
+  "informacion_personal": {
+    "nombre_completo": "Andres Julian Ramirez Guerrero",
+    "telefono": "600662924",
+    "email": "ajulianrague@gmail.com",
+    "ubicacion": "Valencia, España",
+    "portafolio": "https://Ramizzz8.github.io/portfolio"
+  },
+  "perfil_profesional": "Estudiante de Desarrollo de Aplicaciones Web con conocimientos en HTML, CSS, JavaScript y bases de datos no relacionales. Apasionado por la tecnología y el desarrollo web, con habilidades para trabajar en equipo y resolver problemas de manera eficiente.",
+  "educacion": [
+    {
+      "titulo": "Bachiller",
+      "institucion": "GLAB",
+      "ubicacion": "Colombia",
+      "fecha_inicio": "2013",
+      "fecha_fin": "2024"
+    }
+  ],
+  "habilidades": {
+    "tecnicas": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Bases de datos no relacionales"
+    ],
+    "blandas": [
+      "Trabajo en equipo",
+      "Comunicación efectiva"
+    ]
+  },
+  "idiomas": [
+    {
+      "idioma": "Español",
+      "nivel": "Nivel nativo"
+    },
+    {
+      "idioma": "Inglés",
+      "nivel": "B2 Intermedio Alto"
+    }
+  ],
+  "proyectos": [
+    {
+      "nombre": "Web Migratoria",
+      "descripcion": "Página web informativa sobre migración y recursos para migrantes.",
+      "tecnologias": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Python"
+      ]
+    }
+  ],
+  "referencias": "Disponibles a solicitud"
+}
